@@ -1,0 +1,18 @@
+!!!
+%html
+ %head
+  %title Yellow Pencil Fancy Friday
+  %link(rel="stylesheet" href="css/styles.css")
+  %link(rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Lato:400,700|Reenie+Beanie" type="text/css")
+ %body
+  %header{:role => "banner"}
+   %h1 #ypfancyfriday
+   %h2 at Yellow Pencil
+  -@photos.each do |datum|
+   .photo
+    %img{:src => datum.images.standard_resolution.url}
+    -if datum.caption.text != "#picoftheday"
+     .caption
+      %p=datum.caption.text
+
+
