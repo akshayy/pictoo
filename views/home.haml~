@@ -1,0 +1,30 @@
+!!!
+%html
+ %head
+  %title Pictoo
+  %link(rel="stylesheet" href="css/styles.css")
+  %link(rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora|Oswald" type="text/css")
+ %body
+  %div{ :class => "pictoo" }
+   %h1 Pictoo
+  %div{ :class => "info" }
+   %h4 Search Instagram using hashtags
+  %div{ :class =>"search-unit" } 
+   %form{ :action => "/check", :method => "get" }
+    %fieldset
+     %input{:type => "text", :name => "hashtag", :class => "searchbar", :placeholder => "Ex.picoftheday"}
+     %input{:type => "submit", :value => "Search", :class => "searchbtn"}
+   %div{ :class => "flashError" }  
+    %h2=@errorVariable
+     
+
+
+
+
+
+
+
+
+
+
+

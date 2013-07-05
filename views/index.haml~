@@ -1,13 +1,16 @@
 !!!
 %html
  %head
-  %title Yellow Pencil Fancy Friday
+  %title Pictoo
   %link(rel="stylesheet" href="css/styles.css")
-  %link(rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Lato:400,700|Reenie+Beanie" type="text/css")
+  %link(rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora|Oswald" type="text/css")
  %body
   %header{:role => "banner"}
-   %h1 #ypfancyfriday
-   %h2 at Yellow Pencil
+   %h1 Pictoo
+   %h2 Search Instagram using hashtags
+   %div{:class =>"backHome" }
+    %h5
+     %a{:href => '/'} HOME
   -@photos.each do |datum|
    .photo
     %img{:src => datum.images.standard_resolution.url}
